@@ -9,18 +9,19 @@ package entites;
  */
 public class AdressePostale {
 	
-	public short streetNb = 26;
-	public String streetName = "Rue de Clementville";
-	public int postalCode = 34000;
-	public String city = "Montpellier";
+	public int streetNb;
+	public String streetName;
+	public int postalCode;
+	public String city;
 	
-	
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public AdressePostale(int rue, String nomRue, int cp, String ville) {
+		streetNb = rue;
+		streetName = nomRue;
+		postalCode = cp;
+		city = ville;
 	}
-
+	
+	public String toString() {
+		return "J'habite au " +streetNb+ " " + streetName+ ",\n" + postalCode + ", " + city;
+	}
 }

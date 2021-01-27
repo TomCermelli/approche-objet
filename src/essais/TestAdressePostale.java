@@ -17,15 +17,16 @@ public class TestAdressePostale {
 	 */
 	public static void main(String[] args) {
 		
-		AdressePostale a1 = new AdressePostale();
 		
-		System.out.println(a1.city);
+		AdressePostale a1 = new AdressePostale(26, "Rue de Clementville", 34000, "Montpellier");
+		
+		
+		System.out.println(a1);
+	
 		
 	
 		
-		AdressePostale a2 = new AdressePostale();
-		
-		System.out.println(a2.streetNb);
+		//System.out.println(a1.streetNb);
 		
 		
 	}
