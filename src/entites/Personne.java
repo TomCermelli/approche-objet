@@ -53,7 +53,7 @@ public class Personne {
 	//Modifié nom
 	public String setLastname(String nom) {
 		lastname = nom;
-		return "Votre nouveau prénom est : " + lastname;
+		return "Votre nouveau nom est : " + lastname;
 	}
 	
 	//Modifié prénom
