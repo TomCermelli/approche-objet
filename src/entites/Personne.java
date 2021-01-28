@@ -70,7 +70,7 @@ public class Personne {
 	
 	
 	//----------------------toString-----------------------
-	public String toString(Personne p) {
+	public String toString() {
 		
 		return "Je m'apelle " +lastname+ " " + firstname + ":\nVoici mon adresse : \n" + fullAdress ;
 	}
