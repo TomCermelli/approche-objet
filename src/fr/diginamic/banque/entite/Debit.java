@@ -7,15 +7,22 @@ public class Debit extends Operation {
 		
 	}
 	
-	public static String afficherType() {
+	@Override
+	public  String afficherType() {
 		return "Débit";
 	}
-	
+
 	@Override
-	public String toString() {
-		String typeOperation = super.toString(Debit.afficherType());
-		return typeOperation;
+	public String getDate() {
+		return "Opération effectué le " +date;
 	}
+
+	@Override
+	public float getMontant() {
+		return montant;
+	}
+	
+	
 	
 
 }

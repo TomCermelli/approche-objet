@@ -17,7 +17,7 @@ public class TestBanque {
 		System.out.println();
 		System.out.println("Les infos suivante concerne la boucle avec le tableau d'objet");
 		// il faut prendre la classe la plus reculé pour prendre toute les extension si besoin
-		Object[] compteTab = new Compte[2]; 
+		Compte[] compteTab = new Compte[2]; 
 		// par exemple un CompteTaux est une extension de Compte du coup il est possible de crée CompteTaux à partir de Compte
 		compteTab[0] = new Compte(1234,15674f);
 		compteTab[1] = new CompteTaux(1574,15648f,12);

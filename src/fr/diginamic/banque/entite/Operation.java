@@ -1,8 +1,8 @@
 package fr.diginamic.banque.entite;
 
 public abstract class Operation {
-	private String date;
-	private float montant;
+	protected String date;
+	protected float montant;
 	
 	public Operation(String date, float montant) {
 		this.date = date;
@@ -10,33 +10,12 @@ public abstract class Operation {
 	}
 
 	// ------------------GETTER------------------
-	public String getDate() {
-		return date;
-	}
+	public abstract String getDate();
 	
-	public float getMontant() {
-		return montant;
-	}
-
-	// ----------------------SETTER--------------
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	public void setMontant(float montant) {
-		this.montant = montant;
-	}
+	public abstract float getMontant();
 	
-	// Autre Methode
+	public abstract String afficherType();
 	
-	public static String afficherType() {
-		return null;
-	}
 	
-	public String toString(String type) {
-		return "Vous avez crée un " +type+ " le " +date+ "\nSon montant est actuellement de " +montant+ "$";
-		
-	}
 	
 }

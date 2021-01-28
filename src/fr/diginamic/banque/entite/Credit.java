@@ -7,14 +7,26 @@ public class Credit extends Operation{
 		
 	}
 	
-	public static String afficherType() {
-		return "Crédit";
-	}
 	
 	@Override
-	public String toString() {
-		String typeOperation = super.toString(Credit.afficherType());
-		return typeOperation;
+	public String afficherType() {
+		return "Crédit";
 	}
+
+
+
+	@Override
+	public String getDate() {
+		return "Opération effectué le " +date;
+	}
+
+
+
+	@Override
+	public float getMontant() {
+		return montant;
+	}
+	
+	
 	
 }
