@@ -15,6 +15,16 @@ public abstract class Operation {
 	public abstract float getMontant();
 	
 	public abstract String afficherType();
+
+	
+	
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public void setMontant(float montant) {
+		this.montant = montant;
+	}
 	
 	
 	

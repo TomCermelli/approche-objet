@@ -27,6 +27,5 @@ public class TestCercle {
 		System.out.println("Le périmètre du cercle est de " + circle3.perimetre());
 		System.out.println("La surface du cercle est de  " + circle3.surface());
 		System.out.println();
-		
 	}
 }
