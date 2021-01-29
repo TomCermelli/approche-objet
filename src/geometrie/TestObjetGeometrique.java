@@ -18,7 +18,7 @@ public class TestObjetGeometrique {
 		for(int i=0; i<tabGeo.length; i++) {
 			System.out.println("Objet de type : " + tabGeo[i].getClass().getSimpleName());
 			System.out.println("Le périmètre de l'objet géométrique est de " + tabGeo[i].perimetre());
-			System.out.println("Le périmètre de l'objet géométrique est de " + tabGeo[i].surface());
+			System.out.println("La surface de l'objet géométrique est de " + tabGeo[i].surface());
 			System.out.println();
 		}
 	}
