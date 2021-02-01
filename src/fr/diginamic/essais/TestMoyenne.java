@@ -25,7 +25,6 @@ public class TestMoyenne {
 		System.out.println();
 		calculMoyenneTab.affichageTableau();
 		
-		calculMoyenneTab.ajout(a+b);
 		
 		System.out.println("La moyenne du tableau est de "+calculMoyenneTab.moyenne());		
 		

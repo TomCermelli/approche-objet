@@ -1,12 +1,12 @@
 package fr.diginamic.operations;
 
 public class CalculMoyenne {
-	private static double[] tabMoyenne = new double[2];
-	private static int index=0;
+	private  double[] tabMoyenne = new double[2];
+	private  int index=0;
 
 	
 	// Ajout dans un tableau + l'agrandir si néccéssaire
-	public static double[] ajout(double nb) {
+	public void ajout(double nb) {
 		
 		if (index == tabMoyenne.length - 1) {
 			double[] temp = new double[tabMoyenne.length+1];
@@ -17,7 +17,6 @@ public class CalculMoyenne {
 		}
 		tabMoyenne[index] = nb;
 		index++;
-		return tabMoyenne;
 	}
 	
 	//Calcul de la moyenne
@@ -25,12 +24,8 @@ public class CalculMoyenne {
 		double somme = 0;
 		for(int i=0; i<tabMoyenne.length; i++) {
 			somme +=tabMoyenne[i];
-			if(i == tabMoyenne.length-1) {
-				System.out.println(i);
-				somme /=  i;
-			}
 		}
-		return somme;
+		return somme / index;
 	}
 	
 	//Affichage du tableau

@@ -28,7 +28,7 @@ public class Theatre {
 			System.out.println("Vous avez rentré trop de participant seulement " +placeRestante+ " personnes ont pus s'inscrire sur les " +clients+ " participants");
 		}
 		else if (client == nbMax) {
-			System.out.println("Il n'y a plus de place dans le théatre");
+			System.err.println("Il n'y a plus de place dans le théatre");
 		}
 	}
 
