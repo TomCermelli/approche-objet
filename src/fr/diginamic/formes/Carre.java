@@ -1,6 +1,6 @@
 package fr.diginamic.formes;
 
-public class Carre extends Rectangle{
+public class Carre extends Rectangle {
 	double longueur;
 
 	public Carre(double longueur) {
@@ -15,7 +15,5 @@ public class Carre extends Rectangle{
 	public void setCote(double cote) {
 		this.longueur = cote;
 	}
-	
-	
 
 }

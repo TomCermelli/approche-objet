@@ -10,8 +10,7 @@ public class Compte {
 		numeroCompte = compte;
 		soldeCompte = solde;
 	}
-	
-	
+
 	// ---------------------GETTER-----------------------
 
 	// Récupérer numéro de compte
@@ -38,7 +37,6 @@ public class Compte {
 		return "Votre nouveau prénom est : " + soldeCompte;
 	}
 
-	
 	// ------------------------toString--------------------
 	public String toString() {
 		return "Votre numéro de compte : " + numeroCompte + "\nVotre solde : " + soldeCompte + "$";

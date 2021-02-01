@@ -18,20 +18,17 @@ public class TestMaison {
 		maison.ajouterPiece(new SalleDeBain(25, (byte) 1));
 		maison.ajouterPiece(new WC(5, (byte) 0));
 		maison.ajouterPiece(new WC(5, (byte) 1));
-		
+
 		maison.getNombrePiece();
 		System.out.println();
-		maison.superficieEtage((byte)0);
-		maison.superficieEtage((byte)1);
-		maison.superficieTotal();		
-		
+		maison.superficieEtage((byte) 0);
+		maison.superficieEtage((byte) 1);
+		maison.superficieTotal();
+
 		System.out.println();
-		//Il faut écrire le nom de la classe pour que ca fonctionne
+		// Il faut écrire le nom de la classe pour que ca fonctionne
 		maison.typePiece("Chambre");
 		maison.superficieGlobalType("Chambre");
-		
-		
-		
 
 	}
 

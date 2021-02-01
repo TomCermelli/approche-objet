@@ -1,16 +1,11 @@
 package fr.diginamic.maison;
 
 public class Maison {
-	Piece[] nombrePiece = new Piece[7];
-	int index=0;
-	
-	
-	
-	
-	
-	
+	private Piece[] nombrePiece = new Piece[7];
+	private int index = 0;
+
 	public void getNombrePiece() {
-		for(int i=0; i<nombrePiece.length; i++) {
+		for (int i = 0; i < nombrePiece.length; i++) {
 			System.out.println(nombrePiece[i]);
 		}
 	}
@@ -20,54 +15,53 @@ public class Maison {
 	}
 
 	public void ajouterPiece(Piece piece) {
-		if(piece != null && piece.superficie>=0 && piece.etage>=0) {
-			nombrePiece[index]= piece;
+		if (piece != null && piece.superficie >= 0 && piece.etage >= 0) {
+			nombrePiece[index] = piece;
 			index++;
-		}
-		else {
+		} else {
 			System.err.println("Votre objet n'est pas conforme à ce qui est demandé");
 		}
 	}
-	
+
 	public double superficieTotal() {
-		double superficieTotal=0;
-		for(int i=0; i<nombrePiece.length; i++) {
+		double superficieTotal = 0;
+		for (int i = 0; i < nombrePiece.length; i++) {
 			superficieTotal += nombrePiece[i].getSuperficie();
 		}
-		System.out.println("La superficie total de la maison est de " +superficieTotal+ "cm²");
+		System.out.println("La superficie total de la maison est de " + superficieTotal + "cm²");
 		return superficieTotal;
 	}
-	
+
 	public double superficieEtage(byte etage) {
-		double superficiePrecis= 0;
-		for(int i=0; i<nombrePiece.length; i++) {
-			if(nombrePiece[i].getEtage()==etage) {
+		double superficiePrecis = 0;
+		for (int i = 0; i < nombrePiece.length; i++) {
+			if (nombrePiece[i].getEtage() == etage) {
 				superficiePrecis += nombrePiece[i].getSuperficie();
 			}
 		}
-		System.out.println("La superficie de l'étage " +(etage+1)+ " est de " +superficiePrecis+ "cm²");
+		System.out.println("La superficie de l'étage " + (etage + 1) + " est de " + superficiePrecis + "cm²");
 		return superficiePrecis;
-		
+
 	}
-	
+
 	public void superficieGlobalType(String type) {
 		double superficieGlobal = 0;
-		for(int i=0; i<nombrePiece.length;i++) {
-			if(nombrePiece[i].getClass().getSimpleName().equalsIgnoreCase(type)) {
+		for (int i = 0; i < nombrePiece.length; i++) {
+			if (nombrePiece[i].getClass().getSimpleName().equalsIgnoreCase(type)) {
 				superficieGlobal += nombrePiece[i].getSuperficie();
 			}
 		}
-		System.out.println("La superficie global de tous/toutes les " +type+ " est de " +superficieGlobal+ "cm²");
-		
+		System.out.println("La superficie global de tous/toutes les " + type + " est de " + superficieGlobal + "cm²");
+
 	}
-	
+
 	public void typePiece(String type) {
 		byte identique = 0;
-		for(int i=0; i<nombrePiece.length;i++) {
-			if(nombrePiece[i].getClass().getSimpleName().equalsIgnoreCase(type)) {
+		for (int i = 0; i < nombrePiece.length; i++) {
+			if (nombrePiece[i].getClass().getSimpleName().equalsIgnoreCase(type)) {
 				identique++;
 			}
 		}
-		System.out.println("Il y a " +identique+ " pièce de type " +type+ " dans cette maison");
+		System.out.println("Il y a " + identique + " pièce de type " + type + " dans cette maison");
 	}
 }
