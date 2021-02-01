@@ -56,14 +56,17 @@ public class TheatrePro {
 						+ " personnes ont pus s'inscrire sur les " + nbClient + " participants";
 			}
 
-			else if (spectacleTab[i].getInscrit() == spectacleTab[i].getCapacitySpectacle()) {
-				System.err.println();
-				return text = "Il n'y a plus de place dans le spectacle " + spectacleTab[i].getNom();
+			else if (spectacleTab[i].getInscrit() == spectacleTab[i].getCapacitySpectacle() && spectacleTab[i].getNom().equalsIgnoreCase(spectacleNom) ) {
+				System.err.println("Il n'y a plus de place dans le spectacle " + spectacleTab[i].getNom());
+				return text;
+				
 			}
 
 			// Si on est déja au max de participant on prévient l'utilisateur
-			else if (!spectacleTab[i].getNom().equalsIgnoreCase(spectacleNom)) {
-				return "Ce spectacle n'existe pas ";
+			else if (!spectacleTab[i].getNom().equalsIgnoreCase(spectacleNom) && i==spectacleTab.length-1) {
+				System.err.println("Ce spectacle n'existe pas");
+				return text;
+				
 			}
 		}
 		return text;

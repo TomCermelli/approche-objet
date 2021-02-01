@@ -18,23 +18,24 @@ public class TestTheatrePro {
 
 		System.out.println("Tableau initial : ");
 		theatre.getSpectacleTab();
-		System.out.println();
+		System.out.println("\n\n");
 
-		System.out.println(theatre.inscrire(2, "ShakeSpdsqdsear"));
-		System.out.println();
 		System.out.println("Tentative d'ajout d'un nom inexistant :");
+		System.out.println(theatre.inscrire(2, "ShakeSpdsqdsear"));
 		theatre.getSpectacleTab();
-		System.out.println();
+		System.out.println("\n\n");
 
-		System.out.println("Ajout avec de la place :");
+		System.out.println("Tentative quand il y a de la place :");
 		System.out.println(theatre.inscrire(2, "ShakeSpear"));
 		System.out.println();
 		theatre.getSpectacleTab();
+		System.out.println("\n\n");
 
-		// "Le tableau est plein à ce moment
+	
+		System.out.println("Tentative quand c'est plein");
 		System.out.println(theatre.inscrire(4, "ShakeSpear"));
-
 		System.out.println();
+
 		theatre.getNbTotalClients();
 		theatre.getRecetteTotal();
 

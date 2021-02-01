@@ -16,4 +16,13 @@ public class Cercle {
 		// TODO Auto-generated method stub
 		return (rayon * rayon) * Math.PI;
 	}
+
+	public double getRayon() {
+		return rayon;
+	}
+
+	public void setRayon(double rayon) {
+		this.rayon = rayon;
+	}
+
 }
