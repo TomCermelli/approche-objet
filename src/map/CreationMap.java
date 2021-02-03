@@ -26,8 +26,7 @@ public class CreationMap {
 		while (iterKey.hasNext()) {
 			String key = iterKey.next();
 			Double value = mapSalaire.get(key);
-			
-			
+
 			System.out.print(key + " " + value + "\n");
 		}
 

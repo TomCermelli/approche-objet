@@ -1,8 +1,8 @@
 package listes;
 
 public class Ville {
-	String nom;
-	int nbHabitant;
+	private String nom;
+	private int nbHabitant;
 
 	public Ville(String nom, int nbHabitant) {
 		super();
@@ -28,6 +28,7 @@ public class Ville {
 
 	@Override
 	public String toString() {
-		return nom + ", habitants : " + nbHabitant + "]";
+		return nom + ", habitants : " + nbHabitant + "\n";
 	}
+
 }

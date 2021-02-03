@@ -39,7 +39,7 @@ public class TestVille {
 			}
 		}
 
-		System.out.println();
+		
 		System.out.println("La ville la plus petite est " + villeNom + " avec " + min
 				+ " habitants, nous allons donc la supprimer");
 		System.out.println();
@@ -75,12 +75,15 @@ public class TestVille {
 		 * ville.remove(villeRemove); System.out.println("La ville la moin peuplé est "
 		 * +nameVille+ " elle a donc été supprimé");
 		 */
-
+		
+		System.out.println("Ville restante\n");
 		// Afficher nos ville restantes
 		for (int i = 0; i < ville.size(); i++) {
-			System.out.println(ville.get(i));
+			System.out.print(ville.get(i));
 		}
 		System.out.println();
+		System.out.println("Afficher les nom en UpperCase\n");
+		
 
 		iter = ville.iterator();
 
@@ -93,7 +96,7 @@ public class TestVille {
 		}
 
 		for (int i = 0; i < ville.size(); i++) {
-			System.out.println(ville.get(i));
+			System.out.print(ville.get(i));
 		}
 
 	}

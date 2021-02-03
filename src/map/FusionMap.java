@@ -19,13 +19,11 @@ public class FusionMap {
 		map2.put(4, "Blanc");
 		map2.put(5, "Bleu");
 		map2.put(6, "Orange");
-		
+
 		HashMap<Integer, String> map3 = new HashMap<Integer, String>();
 		map3.putAll(map1);
 		map3.putAll(map2);
 		System.out.println(map3);
-
-		
 
 	}
 
