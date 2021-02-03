@@ -22,7 +22,7 @@ public class TestListeInt {
 		
 		for(int i=0; i<listeInt.size(); i++) {
 			if(listeInt.get(i)<0) {
-				listeInt.set(i, Math.abs(listeInt.get(i)));  
+				listeInt.set(i, Math.abs(listeInt.get(i)));  //convertir négatif en positif
 			}
 		}
 		System.out.println("Le tableau en enlevant les valeurs négatives " +listeInt);

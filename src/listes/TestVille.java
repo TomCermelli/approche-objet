@@ -10,9 +10,9 @@ public class TestVille {
 
 	public static void main(String[] args) {
 		List<Ville> ville = new ArrayList<Ville>(
-				Arrays.asList(new Ville("Nice", 343000), new Ville("Carcassonne", 47800), new Ville("Narbonne", 53400),
-						new Ville("Lyon", 484000), new Ville("Foix", 9700), new Ville("Pau", 77200),
-						new Ville("Marseille", 850700), new Ville("Tarbes", 40600)));
+				Arrays.asList(new Ville("Nice", 343_000), new Ville("Carcassonne", 47_800), new Ville("Narbonne", 53_400),
+						new Ville("Lyon", 484_000), new Ville("Foix", 9700), new Ville("Pau", 77_200),
+						new Ville("Marseille", 850_700), new Ville("Tarbes", 40_600)));
 
 		// Afficher la ville la plus peuplé
 		int max = 0;
@@ -35,7 +35,7 @@ public class TestVille {
 			if (min > ville.get(i).getNbHabitant()) {
 				min = ville.get(i).getNbHabitant();
 				villeNom = ville.get(i).getNom();
-				System.out.println(min);
+
 			}
 		}
 
@@ -56,27 +56,23 @@ public class TestVille {
 			}
 			index++;
 		}
-
 		ville.remove(villeSupprimer);
 
-		System.out.println("Nom de la ville : " + villeNom + " habitants : " + minRemove);
-		System.out.println();
-		
-		
-		
-		//Rechercher la plus petite ville, version boucle for
+		// Rechercher la plus petite ville, version boucle for
 		int nbhabitant = ville.get(0).getNbHabitant();
 		Ville villeRemove = null;
 		String nameVille = "";
-		for(int i=0; i<ville.size(); i++) {
-			if(ville.get(i).getNbHabitant() < nbhabitant ) {
+		for (int i = 0; i < ville.size(); i++) {
+			if (ville.get(i).getNbHabitant() < nbhabitant) {
 				nbhabitant = ville.get(i).getNbHabitant();
 				nameVille = ville.get(i).getNom();
 				villeRemove = ville.get(i);
 			}
 		}
-		/*ville.remove(villeRemove);
-		System.out.println("La ville la moin peuplé est " +nameVille+ " elle a donc été supprimé");*/
+		/*
+		 * ville.remove(villeRemove); System.out.println("La ville la moin peuplé est "
+		 * +nameVille+ " elle a donc été supprimé");
+		 */
 
 		// Afficher nos ville restantes
 		for (int i = 0; i < ville.size(); i++) {
@@ -89,11 +85,13 @@ public class TestVille {
 		while (iter.hasNext()) { // iter.hasNext() est équivalent à i<listeInt.size()
 			Ville testIter = iter.next(); // iter.next est équivalent à listeInt.get(i)
 			if (testIter.getNbHabitant() > 100_000) {
-				System.out.println(testIter.getNom().toUpperCase());
-			} else {
-				System.out.println(testIter);
+				testIter.setNom(testIter.getNom().toUpperCase());
 			}
 			index++;
+		}
+
+		for (int i = 0; i < ville.size(); i++) {
+			System.out.println(ville.get(i));
 		}
 
 	}
