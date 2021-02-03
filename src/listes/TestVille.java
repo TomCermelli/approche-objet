@@ -10,15 +10,15 @@ public class TestVille {
 
 	public static void main(String[] args) {
 		List<Ville> ville = new ArrayList<Ville>(
-				Arrays.asList(new Ville("Nice", 343_000), new Ville("Carcassonne", 47_800), new Ville("Narbonne", 53_400),
-						new Ville("Lyon", 484_000), new Ville("Foix", 9700), new Ville("Pau", 77_200),
-						new Ville("Marseille", 850_700), new Ville("Tarbes", 40_600)));
+				Arrays.asList(new Ville("Nice", 343_000), new Ville("Carcassonne", 47_800),
+						new Ville("Narbonne", 53_400), new Ville("Lyon", 484_000), new Ville("Foix", 9700),
+						new Ville("Pau", 77_200), new Ville("Marseille", 850_700), new Ville("Tarbes", 40_600)));
 
 		// Afficher la ville la plus peuplé
-		int max = 0;
-		int index = 0;
-		int compteur = 0;
-		String villeNom = "";
+		int max = ville.get(0).getNbHabitant();
+
+		String villeNom = ville.get(0).getNom();
+
 		int min = ville.get(0).getNbHabitant();
 
 		for (int i = 0; i < ville.size(); i++) {
@@ -45,6 +45,8 @@ public class TestVille {
 		System.out.println();
 
 		// Rechercher la plus petite ville pour la supprimer ensuite, version itérator
+		int index = 0;
+
 		Iterator<Ville> iter = ville.iterator();
 		int minRemove = ville.get(0).getNbHabitant();
 		Ville villeSupprimer = null;
