@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 import fr.diginamic.recensement.service.RecherchePopulation10Dep;
 import fr.diginamic.recensement.service.RecherchePopulation10Reg;
+import fr.diginamic.recensement.service.RecherchePopulation10Ville;
 import fr.diginamic.recensement.service.RecherchePopulationDep;
 import fr.diginamic.recensement.service.RecherchePopulationReg;
 import fr.diginamic.recensement.service.RecherchePopulationVille;
@@ -81,6 +82,10 @@ public class Application {
 			case 7:
 				RechercheVille10Reg recherchePop7 = new RechercheVille10Reg();
 				recherchePop7.traiter(recensement, scanner);
+				break;
+			case 8:
+				RecherchePopulation10Ville recherchePop8 = new RecherchePopulation10Ville();
+				recherchePop8.traiter(recensement, scanner);
 				break;
 			default:
 				System.out.println("Vous sortez de l'application, aurevoir");
