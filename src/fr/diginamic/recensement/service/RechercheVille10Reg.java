@@ -9,13 +9,13 @@ import java.util.Set;
 import fr.diginamic.recensement.MenuService;
 import fr.diginamic.recensement.Recensement;
 
-public class RechercheVille10Dep extends MenuService {
-
+public class RechercheVille10Reg extends MenuService {
+	
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
 		hashMapTrie trie = new hashMapTrie();
 		System.out.println("\nVeuillez entrez le numéro d'un département afin de voir les 10 villes les plus peuplées de celui ci");
-		String depart = scanner.nextLine();
+		String region = scanner.nextLine();
 
 		HashMap<String, Integer> mapHabDep = new HashMap<String, Integer>();
 		String nomVille = recensement.getVilles().get(1).getCodeCommune();
@@ -23,7 +23,7 @@ public class RechercheVille10Dep extends MenuService {
 		int nbHabs = 0;
 
 		for (int i = 0; i < recensement.getVilles().size(); i++) {
-			if (recensement.getVilles().get(i).getCodeDepart().equalsIgnoreCase(depart)) {
+			if (recensement.getVilles().get(i).getNomRegion().equalsIgnoreCase(region)) {
 				verif = true;
 
 				nomVille = recensement.getVilles().get(i).getNomCommune();
@@ -48,12 +48,12 @@ public class RechercheVille10Dep extends MenuService {
 		
 		// Si on ne trouve aucun département
 		if (verif == false) {
-			System.err.println("Ce département n'existe pas veuillez choisir un département valide\n");
+			System.err.println("Ce département n'existe pas veuillez choisir un département valide");
 		}
 
 		HashMap<Integer, String> map = trie.sortValues(mapHabDep);
 		int compteur = 0;
-		System.out.println("Les 10 villes les plus peuplées dans le " + depart + " sont : \n");
+		System.out.println("Les 10 villes les plus peuplées dans la région de " + region + " sont : \n");
 
 		Set set = map.entrySet(); // on utilise le set pour correspondre au Map.Entry ensuite
 		Iterator iterator = set.iterator();
@@ -74,5 +74,6 @@ public class RechercheVille10Dep extends MenuService {
 
 		
 	}
+
 
 }

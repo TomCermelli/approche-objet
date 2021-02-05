@@ -16,6 +16,7 @@ import fr.diginamic.recensement.service.RecherchePopulationDep;
 import fr.diginamic.recensement.service.RecherchePopulationReg;
 import fr.diginamic.recensement.service.RecherchePopulationVille;
 import fr.diginamic.recensement.service.RechercheVille10Dep;
+import fr.diginamic.recensement.service.RechercheVille10Reg;
 
 public class Application {
 
@@ -76,6 +77,10 @@ public class Application {
 			case 6:
 				RechercheVille10Dep recherchePop6 = new RechercheVille10Dep();
 				recherchePop6.traiter(recensement, scanner);
+				break;
+			case 7:
+				RechercheVille10Reg recherchePop7 = new RechercheVille10Reg();
+				recherchePop7.traiter(recensement, scanner);
 				break;
 			default:
 				System.out.println("Vous sortez de l'application, aurevoir");

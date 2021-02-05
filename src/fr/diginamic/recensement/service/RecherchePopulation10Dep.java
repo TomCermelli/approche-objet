@@ -58,6 +58,7 @@ public class RecherchePopulation10Dep extends MenuService {
 			compteur++;
 
 		}
+		System.out.println();
 	}
 
 }

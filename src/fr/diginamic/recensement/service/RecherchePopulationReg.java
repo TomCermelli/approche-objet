@@ -24,7 +24,7 @@ public class RecherchePopulationReg extends MenuService {
 		}
 
 		if (verif == false) {
-			System.err.println("Cette région n'existe pas , veuillez choisir une région valide");
+			System.err.println("Cette région n'existe pas , veuillez choisir une région valide\n");
 		}
 
 		System.out.println("La population dans la région " + region + " est de " + nbHabs + " habitants\n");

@@ -23,7 +23,6 @@ public class RecherchePopulationDep extends MenuService {
 			}
 		}
 	
-		
 		if (verif == false) {
 			System.err.println("Ce département n'existe pas veuillez choisir un département valide");
 		}
