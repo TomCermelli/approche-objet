@@ -10,19 +10,23 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import fr.diginamic.recensement.service.RecherchePopulation10Dep;
+import fr.diginamic.recensement.service.RecherchePopulation10Reg;
+import fr.diginamic.recensement.service.RecherchePopulationDep;
+import fr.diginamic.recensement.service.RecherchePopulationReg;
 import fr.diginamic.recensement.service.RecherchePopulationVille;
+import fr.diginamic.recensement.service.RechercheVille10Dep;
 
 public class Application {
 
 	public static void main(String[] args) throws IOException {
 		Path pathOrigine = Paths.get("C:/ProjetJava/recensement.csv");
-		
+
 		List<String> lines = Files.readAllLines(pathOrigine, StandardCharsets.UTF_8);
 		lines.remove(0);
 		Recensement recensement = new Recensement();
-		
-		
-		for(int i=0; i<lines.size(); i++) {
+		// Stockage de valeur dans recensement afin d'avoir toute les villes du csv
+		for (int i = 0; i < lines.size(); i++) {
 			String[] infoVille = lines.get(i).split(";");
 			String codeRegion = infoVille[0];
 			String nomRegion = infoVille[1];
@@ -30,37 +34,53 @@ public class Application {
 			String codeCommune = infoVille[5];
 			String nomCommune = infoVille[6];
 			int popTotal = Integer.parseInt(infoVille[9].replace(" ", ""));
-			
+
 			Ville ville = new Ville(codeRegion, nomRegion, codeDepart, codeCommune, nomCommune, popTotal);
-			
+
 			recensement.getVilles().add(ville);
 		}
-		System.out.println("1. Population d’une ville donnée");
-		System.out.println("2. Population d’un département donné");
-		System.out.println("3. Population d’une région donnée");
-		System.out.println("4. Afficher les 10 régions les plus peuplées");
-		System.out.println("5. Afficher les 10 départements les plus peuplés");
-		System.out.println("6. Afficher les 10 villes les plus peuplées d’un département");
-		System.out.println("7. Afficher les 10 villes les plus peuplées d’une région");
-		System.out.println("8. Afficher les 10 villes les plus peuplées de France");
-		System.out.println("9. Sortir");
-		
-		
+
+
+		// On demande un nombre à l'utilisateur
 		Scanner scanner = new Scanner(System.in, "UTF-8");
-		int nbChoix = Integer.parseInt(scanner.nextLine());
+		int nbChoix = 0;
+
+		// Tant qu'on ne met pas 9 on est dans l'appli
+		while (nbChoix != 9) {
+			
+			System.out.println("----------MENU----------------\n");
+			MenuService.affichage();
+			nbChoix = Integer.parseInt(scanner.nextLine());
 		
-		switch (nbChoix) {
-		case 1:
-			RecherchePopulationVille recherchePop = new RecherchePopulationVille();
-			recherchePop.traiter(recensement, scanner);
-			break;
-		case 2:
-			System.out.println("hello");
-			break;
-		default:
-			// code block
+			switch (nbChoix) {
+			case 1:
+				RecherchePopulationVille recherchePop = new RecherchePopulationVille();
+				recherchePop.traiter(recensement, scanner);
+				break;
+			case 2:
+				RecherchePopulationDep recherchePop2 = new RecherchePopulationDep();
+				recherchePop2.traiter(recensement, scanner);
+				break;
+			case 3:
+				RecherchePopulationReg recherchePop3 = new RecherchePopulationReg();
+				recherchePop3.traiter(recensement, scanner);
+				break;
+			case 4:
+				RecherchePopulation10Reg recherchePop4 = new RecherchePopulation10Reg();
+				recherchePop4.traiter(recensement, scanner);
+				break;
+			case 5:
+				RecherchePopulation10Dep recherchePop5 = new RecherchePopulation10Dep();
+				recherchePop5.traiter(recensement, scanner);
+				break;
+			case 6:
+				RechercheVille10Dep recherchePop6 = new RechercheVille10Dep();
+				recherchePop6.traiter(recensement, scanner);
+				break;
+			default:
+				System.out.println("Vous sortez de l'application, aurevoir");
+			}
 		}
-		scanner.close();
 	}
 
 }
