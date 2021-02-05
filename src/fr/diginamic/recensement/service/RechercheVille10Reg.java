@@ -53,6 +53,7 @@ public class RechercheVille10Reg extends MenuService {
 
 		HashMap<Integer, String> map = trie.sortValues(mapHabDep);
 		int compteur = 0;
+		int affichage = 10;
 		System.out.println("Les 10 villes les plus peuplées dans la région de " + region + " sont : \n");
 
 		Set set = map.entrySet(); // on utilise le set pour correspondre au Map.Entry ensuite
@@ -64,8 +65,9 @@ public class RechercheVille10Reg extends MenuService {
 				// Map entry demande l'itérator pour prendre l'ensemble key/values du coup on a
 				// accès au getKey + getValue
 				if (compteur >= mapHabDep.size() - 10) {
-					System.out.println(entry.getKey() + " habitants : " + entry.getValue());
-				}
+					System.out.println(affichage+ ". " + entry.getKey() + " habitants : " + entry.getValue());
+					affichage--;
+				} 
 				compteur++;
 
 			}

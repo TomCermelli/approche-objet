@@ -17,14 +17,13 @@ public class RecherchePopulation10Dep extends MenuService {
 	public void traiter(Recensement recensement, Scanner scanner) {
 
 		hashMapTrie trie = new hashMapTrie();
-		HashMap<String, Integer> mapHabReg = new HashMap<String, Integer>();
+		HashMap<String, Integer> mapHabDep = new HashMap<String, Integer>();
 		String departement = recensement.getVilles().get(1).getCodeDepart();
-		List<Integer> regPlusPeuple = new ArrayList<Integer>();
 
 		// ajouter le nombre d'hab dans les régions
 		for (int i = 1; i < recensement.getVilles().size(); i++) {
 			departement = recensement.getVilles().get(i).getCodeDepart();
-			Integer nbHabDepartement = mapHabReg.get(departement);
+			Integer nbHabDepartement = mapHabDep.get(departement);
 			// on utilise le nom de région en tant que clé pour notre
 			// hashMap, on la crée à la volé et on lui donne une valeur
 			// si elle n'existe pas
@@ -39,10 +38,10 @@ public class RecherchePopulation10Dep extends MenuService {
 			} else {
 				nbHabDepartement += recensement.getVilles().get(i).getPopulationTotal();
 			}
-			mapHabReg.put(departement, nbHabDepartement);
+			mapHabDep.put(departement, nbHabDepartement);
 		}
 
-		HashMap<Integer, String> map = trie.sortValues(mapHabReg);
+		HashMap<Integer, String> map = trie.sortValues(mapHabDep);
 		int compteur = 0;
 		System.out.println("\nLes 10 départements les plus peuplés sont :");
 		Set set = map.entrySet();
@@ -52,7 +51,7 @@ public class RecherchePopulation10Dep extends MenuService {
 			Map.Entry entry = (Map.Entry) iterator.next();
 			// Map entry demande l'itérator pour prendre l'ensemble key/values du coup on a
 			// accès au getKey + getValue
-			if (compteur >= mapHabReg.size() - 10) {
+			if (compteur >= mapHabDep.size() - 10) {
 				System.out.println("Le " +entry.getKey()+ " habitants : " + entry.getValue());
 			}
 			compteur++;
