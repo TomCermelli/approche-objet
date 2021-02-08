@@ -8,12 +8,12 @@ public class TestDates {
 	public static void main(String[] args) {
 		//jour/mois/ann�e
 		Date dateMaintenant = new Date(121,1,1);
-		SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat formatDate = new SimpleDateFormat("'le 'dd/MM/yyyy");
 		System.out.println(formatDate.format(dateMaintenant));
 		
 		//année/mois/jour heure:minute:seconde
 		Date dateMai = new Date(116, 4, 19, 23, 59, 30);
-		SimpleDateFormat formatDate2 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		SimpleDateFormat formatDate2 = new SimpleDateFormat("'le 'yyyy/MM/dd HH:mm:ss");
 		System.out.println(formatDate2.format(dateMai));
 	}
 
