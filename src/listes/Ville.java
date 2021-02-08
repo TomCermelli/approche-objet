@@ -27,6 +27,18 @@ public class Ville {
 	}
 
 	@Override
+	public boolean equals(Object obj) {
+
+		if (!(obj instanceof Ville)) {
+			return false;
+		}
+
+		Ville autre = (Ville) obj;
+		return this.nom.equals(autre.getNom()) && this.nbHabitant == autre.getNbHabitant();
+
+	}
+
+	@Override
 	public String toString() {
 		return nom + ", habitants : " + nbHabitant + "\n";
 	}
