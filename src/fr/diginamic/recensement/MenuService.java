@@ -5,14 +5,14 @@ import java.util.Scanner;
 public abstract class MenuService {
 	
 	public static void affichage() {
-		System.out.println("1. Population d’une ville donnée");
-		System.out.println("2. Population d’un département donné");
-		System.out.println("3. Population d’une région donnée");
-		System.out.println("4. Afficher les 10 régions les plus peuplées");
-		System.out.println("5. Afficher les 10 départements les plus peuplés");
-		System.out.println("6. Afficher les 10 villes les plus peuplées d’un département");
-		System.out.println("7. Afficher les 10 villes les plus peuplées d’une région");
-		System.out.println("8. Afficher les 10 villes les plus peuplées de France");
+		System.out.println("1. Population dÃ©une ville donnÃ©e");
+		System.out.println("2. Population dÃ©un dÃ©partement donnÃ©");
+		System.out.println("3. Population dÃ©une rÃ©gion donnÃ©e");
+		System.out.println("4. Afficher les 10 rÃ©gions les plus peuplÃ©es");
+		System.out.println("5. Afficher les 10 dÃ©partements les plus peuplÃ©s");
+		System.out.println("6. Afficher les 10 villes les plus peuplÃ©es dÃ©un dÃ©partement");
+		System.out.println("7. Afficher les 10 villes les plus peuplÃ©es dÃ©une rÃ©gion");
+		System.out.println("8. Afficher les 10 villes les plus peuplÃ©es de France");
 		System.out.println("9. Sortir");
 	}
 	

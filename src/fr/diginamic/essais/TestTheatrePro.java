@@ -12,7 +12,7 @@ public class TestTheatrePro {
 		 */
 		TheatrePro theatre = new TheatrePro();
 		theatre.ajouterSpectacle(new Spectacle("ShakeSpear", "concert", 15.5f, (short) 20, (short) 18));
-		theatre.ajouterSpectacle(new Spectacle("Les rigolos", "comédit", 10.5f, (short) 15, (short) 11));
+		theatre.ajouterSpectacle(new Spectacle("Les rigolos", "comÃ©dit", 10.5f, (short) 15, (short) 11));
 		theatre.ajouterSpectacle(new Spectacle("Test d'impro", "improvisation", 5.5f, (short) 5, (short) 2));
 		theatre.ajouterSpectacle(new Spectacle("Dance Floor", "dance", 8f, (short) 10, (short) 3));
 

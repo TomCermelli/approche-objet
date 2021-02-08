@@ -27,7 +27,7 @@ public abstract class Piece {
 	}
 
 	public String toString() {
-		String text = (getClass().getSimpleName() + " ‡ l'Ètage " + etage + ", Superficie : " + superficie + "cm≤");
+		String text = (getClass().getSimpleName() + " √© l'√©tage " + etage + ", Superficie : " + superficie + "cm√©");
 		return text;
 
 	}

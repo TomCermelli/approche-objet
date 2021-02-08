@@ -26,41 +26,41 @@ public class Personne {
 
 	// ---------------------GETTER-----------------------
 
-	// Récupérer le prénom + nom en majuscule
+	// RÃ©cupÃ©rer le prÃ©nom + nom en majuscule
 	public String getFullName() {
 		return lastname.toUpperCase() + " " + firstname;
 	}
 
-	// Récupérer le nom
+	// RÃ©cupÃ©rer le nom
 	public String getLastname() {
 		return "Votre nom : " + lastname;
 	}
 
-	// Récupérer le prénom
+	// RÃ©cupÃ©rer le prÃ©nom
 	public String getFirstname() {
-		return "Votre prénom : " + firstname;
+		return "Votre prÃ©nom : " + firstname;
 	}
 
-	// Récupérer l'adresse
+	// RÃ©cupÃ©rer l'adresse
 	public String getAdresse() {
 		return "Votre adresse : " + fullAdress;
 	}
 
 	// ----------------------SETTER-----------------------
 
-	// Modifié nom
+	// ModifiÃ© nom
 	public String setLastname(String nom) {
 		lastname = nom;
 		return "Votre nouveau nom est : " + lastname;
 	}
 
-	// Modifié prénom
+	// ModifiÃ© prÃ©nom
 	public String setFirstname(String prenom) {
 		firstname = prenom;
-		return "Votre nouveau prénom est : " + firstname;
+		return "Votre nouveau prÃ©nom est : " + firstname;
 	}
 
-	// Modifié adresse
+	// ModifiÃ© adresse
 	public String setAdress(AdressePostale adresse) {
 		fullAdress = adresse;
 		return "Votre nouvelle adresse est : " + fullAdress;

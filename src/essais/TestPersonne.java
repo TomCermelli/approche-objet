@@ -18,11 +18,11 @@ public class TestPersonne {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		// instance de la classe Personne nommée p2
+		// instance de la classe Personne nommÃ©e p2
 		Personne p1 = new Personne("CERMELLI", "Tom");
 		System.out.println();
 
-		// instance de la classe Personne nommée p2
+		// instance de la classe Personne nommÃ©e p2
 		AdressePostale adresse1 = new AdressePostale(30, "Rue des machins", 44000, "Nantes");
 		AdressePostale adresse2 = new AdressePostale(26, "Rue de Clementville", 34070, "Montpellier");
 		Personne p2 = new Personne("Goupillot", "Etienne", adresse1);

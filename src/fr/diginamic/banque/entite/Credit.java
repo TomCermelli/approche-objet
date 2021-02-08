@@ -9,12 +9,12 @@ public class Credit extends Operation {
 
 	@Override
 	public String afficherType() {
-		return "Crédit";
+		return "CrÃ©dit";
 	}
 
 	@Override
 	public String getDate() {
-		return "Opération effectué le " + date;
+		return "OpÃ©ration effectuÃ© le " + date;
 	}
 
 	@Override

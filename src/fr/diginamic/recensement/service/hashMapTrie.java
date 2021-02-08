@@ -12,32 +12,32 @@ import java.util.Map;
 
 public class hashMapTrie {
 
-	@SuppressWarnings("unchecked") // Je voyais plus rien du coup on enlève ca pour le moment
+	@SuppressWarnings("unchecked") // Je voyais plus rien du coup on enlÃ©ve ca pour le moment
 	public static HashMap sortValues(HashMap map) // on donne une hashMap
 	{
-		List<String> list = new ArrayList<String>(map.entrySet()); // on crée une nouvelle liste avec pour entrée une
+		List<String> list = new ArrayList<String>(map.entrySet()); // on crÃ©e une nouvelle liste avec pour entrÃ©e une
 																	// hashMap
 		// avec ces valeurs (entrySet);
 		// On va comparer 2 valeurs dans notre hashMap
 		Collections.sort(list, new Comparator<Object>() {
-			public int compare(Object o1, Object o2) { // On prend 2 objet , pour le coup il s'agit de nos entrée
-														// key/value o1 = première valeur de notre hashmap et o2 à la
+			public int compare(Object o1, Object o2) { // On prend 2 objet , pour le coup il s'agit de nos entrÃ©e
+														// key/value o1 = premiÃ©re valeur de notre hashmap et o2 Ã© la
 														// seconde
-				// On donne le resultat de la comparaison de la première valeur
+				// On donne le resultat de la comparaison de la premiÃ©re valeur
 				// (Comparable(Map.Entry) (o1)).getValue()) )
-				// à la 2eme ".compareTo(((Map.Entry) (o2)).getValue()" la map entry prend du
-				// coup la 2eme valeur de notre hashmap et en récupère la value
+				// Ã© la 2eme ".compareTo(((Map.Entry) (o2)).getValue()" la map entry prend du
+				// coup la 2eme valeur de notre hashmap et en rÃ©cupÃ©re la value
 				return ((Comparable<Object>) ((Map.Entry) (o1)).getValue()).compareTo(((Map.Entry) (o2)).getValue());
 
 			}
 		});
 
-		// On copie la hashMap dans une autre afin de préservé l'ordre
-		// Map entry demande une pair , c'est à dire une clé + valeur, pour avoir cette
-		// info il faut l'itérator comme ca on peut avoir le getKey() et le getValue
+		// On copie la hashMap dans une autre afin de prÃ©servÃ© l'ordre
+		// Map entry demande une pair , c'est Ã© dire une clÃ© + valeur, pour avoir cette
+		// info il faut l'itÃ©rator comme ca on peut avoir le getKey() et le getValue
 		HashMap<Object, Object> sortedHashMap = new LinkedHashMap<Object, Object>(); // nos MapEntry sont des objets du
-																						// coup on attends pour clé un
-																						// objet et en valeur également
+																						// coup on attends pour clÃ© un
+																						// objet et en valeur Ã©galement
 		Iterator i = list.iterator();
 		while (i.hasNext()) {
 			Map.Entry entry = (Map.Entry) i.next();

@@ -19,7 +19,7 @@ public class Maison {
 			nombrePiece[index] = piece;
 			index++;
 		} else {
-			System.err.println("Votre objet n'est pas conforme à ce qui est demandé");
+			System.err.println("Votre objet n'est pas conforme Ã© ce qui est demandÃ©");
 		}
 	}
 
@@ -28,7 +28,7 @@ public class Maison {
 		for (int i = 0; i < nombrePiece.length; i++) {
 			superficieTotal += nombrePiece[i].getSuperficie();
 		}
-		System.out.println("La superficie total de la maison est de " + superficieTotal + "cm²");
+		System.out.println("La superficie total de la maison est de " + superficieTotal + "cmÃ©");
 		return superficieTotal;
 	}
 
@@ -39,7 +39,7 @@ public class Maison {
 				superficiePrecis += nombrePiece[i].getSuperficie();
 			}
 		}
-		System.out.println("La superficie de l'étage " + (etage + 1) + " est de " + superficiePrecis + "cm²");
+		System.out.println("La superficie de l'Ã©tage " + (etage + 1) + " est de " + superficiePrecis + "cmÃ©");
 		return superficiePrecis;
 
 	}
@@ -51,7 +51,7 @@ public class Maison {
 				superficieGlobal += nombrePiece[i].getSuperficie();
 			}
 		}
-		System.out.println("La superficie global de tous/toutes les " + type + " est de " + superficieGlobal + "cm²");
+		System.out.println("La superficie global de tous/toutes les " + type + " est de " + superficieGlobal + "cmÃ©");
 
 	}
 
@@ -62,6 +62,6 @@ public class Maison {
 				identique++;
 			}
 		}
-		System.out.println("Il y a " + identique + " pièce de type " + type + " dans cette maison");
+		System.out.println("Il y a " + identique + " piÃ©ce de type " + type + " dans cette maison");
 	}
 }

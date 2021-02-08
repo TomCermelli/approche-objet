@@ -21,20 +21,20 @@ public class RecherchePopulation10Reg extends MenuService {
 		String nomRegion = recensement.getVilles().get(1).getNomRegion();
 		List<Integer> regPlusPeuple = new ArrayList<Integer>();
 
-		// ajouter le nombre d'hab dans les régions
+		// ajouter le nombre d'hab dans les rÃ©gions
 		for (int i = 1; i < recensement.getVilles().size(); i++) {
 			nomRegion = recensement.getVilles().get(i).getNomRegion();
 			Integer nbHabRegion = mapHabReg.get(nomRegion);
-			// on utilise le nom de région en tant que clé pour notre
-			// hashMap, on la crée à la volé et on lui donne une valeur
+			// on utilise le nom de rÃ©gion en tant que clÃ© pour notre
+			// hashMap, on la crÃ©e Ã© la volÃ© et on lui donne une valeur
 			// si elle n'existe pas
 
-			// si le contenu de ma clé est null , c'est à dire qu'on a aucune information
-			// pour la clé donnée
+			// si le contenu de ma clÃ© est null , c'est Ã© dire qu'on a aucune information
+			// pour la clÃ© donnÃ©e
 			if (nbHabRegion == null) {
 				nbHabRegion = recensement.getVilles().get(i).getPopulationTotal();
-				// on initialise une donnée à la clé en question ( exemple première boucle pour
-				// la région Occitani on
+				// on initialise une donnÃ©e Ã© la clÃ© en question ( exemple premiÃ©re boucle pour
+				// la rÃ©gion Occitani on
 				// lui donne un nombre d'hab)
 			} else {
 				nbHabRegion += recensement.getVilles().get(i).getPopulationTotal();
@@ -42,16 +42,16 @@ public class RecherchePopulation10Reg extends MenuService {
 			mapHabReg.put(nomRegion, nbHabRegion);
 		}
 
-		HashMap<Integer, String> map = trie.sortValues(mapHabReg); // on a récupérer le hashmap trié
+		HashMap<Integer, String> map = trie.sortValues(mapHabReg); // on a rÃ©cupÃ©rer le hashmap triÃ©
 		int compteur = 0;
-		System.out.println("\nLes 10 régions les plus peuplés sont :\n");
+		System.out.println("\nLes 10 rÃ©gions les plus peuplÃ©s sont :\n");
 		Set set = map.entrySet(); // on utilise le set pour correspondre au Map.Entry ensuite
 		Iterator iterator = set.iterator();
 
 		while (iterator.hasNext()) {
 			Map.Entry entry = (Map.Entry) iterator.next();
-			// Map entry demande l'itérator pour prendre l'ensemble key/values du coup on a
-			// accès au getKey + getValue
+			// Map entry demande l'itÃ©rator pour prendre l'ensemble key/values du coup on a
+			// accÃ©s au getKey + getValue
 			if (compteur >= mapHabReg.size() - 10) {
 				System.out.println(entry.getKey()+ " habitants : " + entry.getValue());
 			}

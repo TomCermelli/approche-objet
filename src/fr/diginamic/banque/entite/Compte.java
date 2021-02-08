@@ -13,32 +13,32 @@ public class Compte {
 
 	// ---------------------GETTER-----------------------
 
-	// Récupérer numéro de compte
+	// RÃ©cupÃ©rer numÃ©ro de compte
 	public String getNumeroCompte() {
-		return "Votre nouveau numéro de compte est : " + numeroCompte;
+		return "Votre nouveau numÃ©ro de compte est : " + numeroCompte;
 	}
 
-	// Récupérer solde
+	// RÃ©cupÃ©rer solde
 	public String getSolde() {
-		return "Votre nouveau prénom est : " + soldeCompte;
+		return "Votre nouveau prÃ©nom est : " + soldeCompte;
 	}
 
 	// ----------------------SETTER-----------------------
 
-	// Modifié numéro de compte
+	// ModifiÃ© numÃ©ro de compte
 	public String setNumeroCompte(long compte) {
 		numeroCompte = compte;
-		return "Votre nouveau numéro de compte est : " + numeroCompte;
+		return "Votre nouveau numÃ©ro de compte est : " + numeroCompte;
 	}
 
-	// Modifié solde
+	// ModifiÃ© solde
 	public String setSolde(float solde) {
 		soldeCompte = solde;
-		return "Votre nouveau prénom est : " + soldeCompte;
+		return "Votre nouveau prÃ©nom est : " + soldeCompte;
 	}
 
 	// ------------------------toString--------------------
 	public String toString() {
-		return "Votre numéro de compte : " + numeroCompte + "\nVotre solde : " + soldeCompte + "$";
+		return "Votre numÃ©ro de compte : " + numeroCompte + "\nVotre solde : " + soldeCompte + "$";
 	}
 }

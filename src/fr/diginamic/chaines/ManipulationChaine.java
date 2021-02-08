@@ -8,9 +8,9 @@ public class ManipulationChaine {
 		// Tp 1 - 6
 		String chaine = "Durand;Marcel;2 523.5";
 		char premierCaractere = chaine.charAt(0);
-		System.out.println("Premier caractère: " + premierCaractere);
-		System.out.println("La longueur de la chaine de caractère : " + chaine.length());
-		System.out.println("Nombre de caractère jusqu'au premier `;` : " + chaine.indexOf(";"));
+		System.out.println("Premier caractere: " + premierCaractere);
+		System.out.println("La longueur de la chaine de caractere : " + chaine.length());
+		System.out.println("Nombre de caractÃ©re jusqu'au premier `;` : " + chaine.indexOf(";"));
 		System.out.println("Portion de code extraite entre `Durand` et `Marcel` " + chaine.substring(0, 13));
 		System.out.println("Le nom de famille de Durand est : " + chaine.substring(7, chaine.indexOf(";2")));
 		System.out.println("Le nom de famille de Durand en majuscule est : "

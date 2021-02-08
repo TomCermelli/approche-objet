@@ -29,8 +29,8 @@ public class TestListeString {
 
 		Iterator<String> iter = listeString.iterator();
 		int i = 0;
-		while (iter.hasNext()) { // iter.hasNext() est équivalent à i<listeInt.size()
-			String testIter = iter.next(); // iter.next est équivalent à listeInt.get(i)
+		while (iter.hasNext()) { // iter.hasNext() est Ã©quivalent Ã© i<listeInt.size()
+			String testIter = iter.next(); // iter.next est Ã©quivalent Ã© listeInt.get(i)
 			if (testIter.substring(0, 1).equalsIgnoreCase("N")) { // charAt(0) == 'N'
 				iter.remove();
 			}

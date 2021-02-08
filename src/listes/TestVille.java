@@ -14,7 +14,7 @@ public class TestVille {
 						new Ville("Narbonne", 53_400), new Ville("Lyon", 484_000), new Ville("Foix", 9700),
 						new Ville("Pau", 77_200), new Ville("Marseille", 850_700), new Ville("Tarbes", 40_600)));
 
-		// Afficher la ville la plus peupl�
+		// Afficher la ville la plus peuplé
 		int max = ville.get(0).getNbHabitant();
 
 		String villeNom = ville.get(0).getNom();
@@ -27,7 +27,7 @@ public class TestVille {
 				villeNom = ville.get(i).getNom();
 			}
 		}
-		System.out.println("La ville la plus peupl� est " + villeNom + " avec un nombre d'habitant de " + max);
+		System.out.println("La ville la plus peuplé est " + villeNom + " avec un nombre d'habitant de " + max);
 
 		// Afficher la plus petite ville
 		for (int i = 0; i < ville.size(); i++) {
@@ -44,14 +44,14 @@ public class TestVille {
 				+ " habitants, nous allons donc la supprimer");
 		System.out.println();
 
-		// Rechercher la plus petite ville pour la supprimer ensuite, version it�rator
+		// Rechercher la plus petite ville pour la supprimer ensuite, version itérator
 		int index = 0;
 
 		Iterator<Ville> iter = ville.iterator();
 		int minRemove = ville.get(0).getNbHabitant();
 		Ville villeSupprimer = null;
-		while (iter.hasNext()) { // iter.hasNext() est �quivalent � i<listeInt.size()
-			Ville testIter = iter.next(); // iter.next est �quivalent � listeInt.get(i)
+		while (iter.hasNext()) { // iter.hasNext() est équivalent é i<listeInt.size()
+			Ville testIter = iter.next(); // iter.next est équivalent é listeInt.get(i)
 			if (minRemove > testIter.getNbHabitant()) {
 				minRemove = testIter.getNbHabitant();
 				villeSupprimer = testIter;
@@ -72,8 +72,8 @@ public class TestVille {
 			}
 		}
 		/*
-		 * ville.remove(villeRemove); System.out.println("La ville la moin peupl� est "
-		 * +nameVille+ " elle a donc �t� supprim�");
+		 * ville.remove(villeRemove); System.out.println("La ville la moin peuplé est "
+		 * +nameVille+ " elle a donc été supprimé");
 		 */
 		
 		System.out.println("Ville restante\n");
@@ -87,8 +87,8 @@ public class TestVille {
 
 		iter = ville.iterator();
 
-		while (iter.hasNext()) { // iter.hasNext() est �quivalent � i<listeInt.size()
-			Ville testIter = iter.next(); // iter.next est �quivalent � listeInt.get(i)
+		while (iter.hasNext()) { // iter.hasNext() est équivalent é i<listeInt.size()
+			Ville testIter = iter.next(); // iter.next est équivalent é listeInt.get(i)
 			if (testIter.getNbHabitant() > 100_000) {
 				testIter.setNom(testIter.getNom().toUpperCase());
 			}
@@ -97,27 +97,6 @@ public class TestVille {
 
 		for (int i = 0; i < ville.size(); i++) {
 			System.out.print(ville.get(i));
-		}
-		System.out.println();
-		
-		Ville v1 = new Ville("Montpellier", 285_000);
-		Ville v2 = new Ville("Montpellier", 285_000);
-		Ville v3 = v2;
-		
-		if(v1.equals(v2)){
-			System.out.println("Les 2 villes sont identiques\n");
-		}
-		else {
-			System.out.println("Les 2 villes sont différentes\n");
-			
-		}
-		
-		if(v2 == v3) {
-			System.out.println("Les 2 villes sont identiques\n");
-		}
-		else {
-			System.out.println("Les 2 villes sont différentes\n");
-			
 		}
 
 	}

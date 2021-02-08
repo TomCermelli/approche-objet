@@ -22,7 +22,7 @@ public class TestTrie {
 		System.out.println();
 
 		Collections.sort(ville, new CompareVilleNom());
-		System.out.println("Trie par ordre alphabétique \n");
+		System.out.println("Trie par ordre alphabÃ©tique \n");
 		System.out.println(ville);
 
 	}

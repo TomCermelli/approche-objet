@@ -26,7 +26,7 @@ public class CreationMap {
 		System.out.println();
 
 		// Iterator pour parcourir une map
-		// soit parcourir avec une clé soit la valeur
+		// soit parcourir avec une clÃ© soit la valeur
 
 		Iterator<String> iterKey = mapSalaire.keySet().iterator();
 		Iterator<Double> iterValue = mapSalaire.values().iterator();
@@ -51,7 +51,7 @@ public class CreationMap {
 		System.out.println();
 
 		Collections.sort(ville, new CompareVilleNom());
-		System.out.println("Trie par ordre alphabétique \n");
+		System.out.println("Trie par ordre alphabÃ©tique \n");
 		System.out.println(ville);*/
 
 	}

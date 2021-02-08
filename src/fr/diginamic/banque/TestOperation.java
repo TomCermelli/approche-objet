@@ -8,15 +8,15 @@ public class TestOperation {
 	public static void main(String[] args) {
 		Operation[] tabOperation = new Operation[8];
 		// par exemple un CompteTaux est une extension de Compte du coup il est possible
-		// de crée CompteTaux à partir de Compte
-		tabOperation[0] = new Credit("21 février", 156.10f);
-		tabOperation[1] = new Debit("22 février", 340f);
-		tabOperation[2] = new Credit("23 février", 946.10f);
-		tabOperation[3] = new Debit("24 février", 10.0f);
-		tabOperation[4] = new Credit("25 février", 1587.65f);
-		tabOperation[5] = new Debit("26 février", 780f);
-		tabOperation[6] = new Credit("27 février", 156.10f);
-		tabOperation[7] = new Debit("28 février", 20.1f);
+		// de crÃ©e CompteTaux Ã© partir de Compte
+		tabOperation[0] = new Credit("21 fÃ©vrier", 156.10f);
+		tabOperation[1] = new Debit("22 fÃ©vrier", 340f);
+		tabOperation[2] = new Credit("23 fÃ©vrier", 946.10f);
+		tabOperation[3] = new Debit("24 fÃ©vrier", 10.0f);
+		tabOperation[4] = new Credit("25 fÃ©vrier", 1587.65f);
+		tabOperation[5] = new Debit("26 fÃ©vrier", 780f);
+		tabOperation[6] = new Credit("27 fÃ©vrier", 156.10f);
+		tabOperation[7] = new Debit("28 fÃ©vrier", 20.1f);
 
 		float montantTotal = 0.0f;
 
@@ -25,13 +25,13 @@ public class TestOperation {
 		for (int i = 0; i < tabOperation.length; i++) {
 			System.out.println(i + 1 + " tour de boucle");
 			System.out.println(tabOperation[i].getDate() + ", il s'agit d'un " + tabOperation[i].afficherType());
-			System.out.println("Le montant de cette opération est de " + tabOperation[i].getMontant() + " $");
-			if (tabOperation[i].afficherType().equalsIgnoreCase("Crédit")) {
+			System.out.println("Le montant de cette opÃ©ration est de " + tabOperation[i].getMontant() + " $");
+			if (tabOperation[i].afficherType().equalsIgnoreCase("CrÃ©dit")) {
 				montantTotal += tabOperation[i].getMontant();
-			} else if (tabOperation[i].afficherType().equalsIgnoreCase("Débit")) {
+			} else if (tabOperation[i].afficherType().equalsIgnoreCase("DÃ©bit")) {
 				montantTotal -= tabOperation[i].getMontant();
 			}
-			System.out.println("Le montant Total entre le crédit et le débit est de " + montantTotal + " $");
+			System.out.println("Le montant Total entre le crÃ©dit et le dÃ©bit est de " + montantTotal + " $");
 			System.out.println();
 		}
 

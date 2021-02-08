@@ -10,7 +10,7 @@ public class RecherchePopulationReg extends MenuService {
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
 		// TODO Auto-generated method stub
-		System.out.println("\nVeuillez entrez le nom d'une région");
+		System.out.println("\nVeuillez entrez le nom d'une rÃ©gion");
 		String region = scanner.nextLine();
 		boolean verif = false;
 
@@ -24,9 +24,9 @@ public class RecherchePopulationReg extends MenuService {
 		}
 
 		if (verif == false) {
-			System.err.println("Cette région n'existe pas , veuillez choisir une région valide\n");
+			System.err.println("Cette rÃ©gion n'existe pas , veuillez choisir une rÃ©gion valide\n");
 		}
 
-		System.out.println("La population dans la région " + region + " est de " + nbHabs + " habitants\n");
+		System.out.println("La population dans la rÃ©gion " + region + " est de " + nbHabs + " habitants\n");
 	}
 }

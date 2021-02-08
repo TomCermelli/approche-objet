@@ -1,13 +1,13 @@
 package geometrie.entite;
 
 /**
- * Liste les méthodes obligatoires que doit posséder un objet géométrique
+ * Liste les mÃ©thodes obligatoires que doit possÃ©der un objet gÃ©omÃ©trique
  * 
  * @author DIGINAMIC
  */
 public interface ObjetGeometrique {
 	/**
-	 * Retourne le périmètre d’une forme géométrique
+	 * Retourne le pÃ©rimÃ©tre dÃ©une forme gÃ©omÃ©trique
 	 * 
 	 * @return double
 	 */

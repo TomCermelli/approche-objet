@@ -43,7 +43,7 @@ public class Application {
 		}
 
 
-		// On demande un nombre à l'utilisateur
+		// On demande un nombre Ã© l'utilisateur
 		Scanner scanner = new Scanner(System.in, "UTF-8");
 		int nbChoix = 0;
 

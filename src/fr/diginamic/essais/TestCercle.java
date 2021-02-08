@@ -15,7 +15,7 @@ public class TestCercle {
 
 		for (int i = 0; i < tabGeo.length; i++) {
 			System.out.println("Objet de type : " + tabGeo[i].getClass().getSimpleName());
-			System.out.println("Le périmètre du cercle est de " + tabGeo[i].perimetre());
+			System.out.println("Le pÃ©rimÃ©tre du cercle est de " + tabGeo[i].perimetre());
 			System.out.println("La surface du cercle est de  " + tabGeo[i].surface());
 			System.out.println();
 		}
@@ -23,7 +23,7 @@ public class TestCercle {
 		System.out.println();
 		Cercle circle3 = CercleFactory.createCircle(10);
 		System.out.println("Objet de type : " + circle3.getClass().getSimpleName());
-		System.out.println("Le périmètre du cercle est de " + circle3.perimetre());
+		System.out.println("Le pÃ©rimÃ©tre du cercle est de " + circle3.perimetre());
 		System.out.println("La surface du cercle est de  " + circle3.surface());
 		System.out.println();
 	}

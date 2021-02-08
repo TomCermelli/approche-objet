@@ -15,26 +15,26 @@ public class TestListeInt {
 		
 		System.out.println(listeInt);
 		System.out.println("La taille de la liste est de " +listeInt.size());
-		System.out.println("L'élement maximum est : " + Collections.max(listeInt) );
-		System.out.println("L'élement minimum est : " + Collections.min(listeInt) );
+		System.out.println("L'Ã©lement maximum est : " + Collections.max(listeInt) );
+		System.out.println("L'Ã©lement minimum est : " + Collections.min(listeInt) );
 		listeInt.remove(Collections.min(listeInt));
-		System.out.println("On enlève le minimum " +listeInt);
+		System.out.println("On enlÃ©ve le minimum " +listeInt);
 		
 		for(int i=0; i<listeInt.size(); i++) {
 			if(listeInt.get(i)<0) {
-				listeInt.set(i, Math.abs(listeInt.get(i)));  //convertir négatif en positif
+				listeInt.set(i, Math.abs(listeInt.get(i)));  //convertir nÃ©gatif en positif
 			}
 		}
-		System.out.println("Le tableau en enlevant les valeurs négatives " +listeInt);
+		System.out.println("Le tableau en enlevant les valeurs nÃ©gatives " +listeInt);
 		
-		// Pour remove dans une boucle il ne faut pas utiliser for mais un itérator
+		// Pour remove dans une boucle il ne faut pas utiliser for mais un itÃ©rator
 		/*
 		 * Iterator<Integer> iter = listeInt.iterator();
 		 * 
 		 * 
 		 * int i = 0
-		 * while(iter.hasNext()) { // iter.hasNext() est équivalent à i<listeInt.size()
-		 * 	int maVar = iter.next()  // iter.next est équivalent à listeInt.get(i)
+		 * while(iter.hasNext()) { // iter.hasNext() est Ã©quivalent Ã© i<listeInt.size()
+		 * 	int maVar = iter.next()  // iter.next est Ã©quivalent Ã© listeInt.get(i)
 		 * 	if(i % 2 == 0) {
 		 * 		iter.remove();
 		 * 	}

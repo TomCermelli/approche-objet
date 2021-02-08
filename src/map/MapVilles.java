@@ -32,7 +32,7 @@ public class MapVilles {
 				villeRemove = key;
 			}
 		}
-		System.out.println("Suppréssion de " + villeRemove);
+		System.out.println("SupprÃ©ssion de " + villeRemove);
 		mapVilles.remove(villeRemove);
 		System.out.println(mapVilles);
 	}

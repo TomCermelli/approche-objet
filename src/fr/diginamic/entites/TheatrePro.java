@@ -12,39 +12,39 @@ public class TheatrePro {
 		index++;
 	}
 
-	// Retourner un spectacle gr‚ce ‡ son nom
+	// Retourner un spectacle gr√©ce √© son nom
 	public void getSpectacle(String nomSpectacle) {
 		boolean verif = false;
 		for (int i = 0; i < spectacleTab.length; i++) {
 			if (spectacleTab[i].getNom().equalsIgnoreCase(nomSpectacle)) {
 				System.out.println("Voici toute les informations du spectacle : \n" + spectacleTab[i].getNom()
 						+ " est un spectacle de type : " + spectacleTab[i].getType() + "\nIl peut accueillir "
-						+ spectacleTab[i].getCapacitySpectacle() + " et son prix d'entrÈ est de "
+						+ spectacleTab[i].getCapacitySpectacle() + " et son prix d'entr√© est de "
 						+ spectacleTab[i].getTarifUnitaire() + "$");
 
 				verif = true;
 			} else if (i == spectacleTab.length - 1 && verif == false) {
-				System.err.println("Aucun spectacle de ce nom n'a ÈtÈ trouvÈ");
+				System.err.println("Aucun spectacle de ce nom n'a √©t√© trouv√©");
 			}
 		}
 	}
 
-	// Inscription d'un certain nombre de client ‡ un Spectacle de notre choix
+	// Inscription d'un certain nombre de client √© un Spectacle de notre choix
 	public String inscrire(int nbClient, String spectacleNom) {
 		String text = "";
 		for (int i = 0; i < spectacleTab.length; i++) {
 			// Nombre de place restante pour chaque spectacle
 			int placeRestante = spectacleTab[i].getCapacitySpectacle() - spectacleTab[i].getInscrit();
 
-			// Si on a trouvÈ le bon nom est qu'on a assez de place
+			// Si on a trouv√© le bon nom est qu'on a assez de place
 			if (spectacleTab[i].getNom().equalsIgnoreCase(spectacleNom)
 					&& spectacleTab[i].getCapacitySpectacle() >= (spectacleTab[i].getInscrit() + nbClient)) {
 
 				spectacleTab[i].setInscrit((short) (spectacleTab[i].getInscrit() + (short) nbClient));
-				return text = nbClient + " personnes ont ÈtÈ ajoutÈ au spectacle " + spectacleTab[i].getNom();
+				return text = nbClient + " personnes ont √©t√© ajout√© au spectacle " + spectacleTab[i].getNom();
 			}
 
-			// Si on a trop de participant dans le spectacle demandÈ mais qu'il reste de la
+			// Si on a trop de participant dans le spectacle demand√© mais qu'il reste de la
 			// place on ajoute ceux qui le peuvent
 			else if ((spectacleTab[i].getNom().equalsIgnoreCase(spectacleNom)
 					&& (spectacleTab[i].getCapacitySpectacle() < (spectacleTab[i].getInscrit() + nbClient)
@@ -52,7 +52,7 @@ public class TheatrePro {
 
 				spectacleTab[i].setInscrit((short) ((short) spectacleTab[i].getInscrit() + placeRestante));
 				System.out.println();
-				return text = "Vous avez rentrÈ trop de participant seulement " + placeRestante
+				return text = "Vous avez rentr√© trop de participant seulement " + placeRestante
 						+ " personnes ont pus s'inscrire sur les " + nbClient + " participants";
 			}
 
@@ -62,7 +62,7 @@ public class TheatrePro {
 				
 			}
 
-			// Si on est dÈja au max de participant on prÈvient l'utilisateur
+			// Si on est d√©ja au max de participant on pr√©vient l'utilisateur
 			else if (!spectacleTab[i].getNom().equalsIgnoreCase(spectacleNom) && i==spectacleTab.length-1) {
 				System.err.println("Ce spectacle n'existe pas");
 				return text;
@@ -72,7 +72,7 @@ public class TheatrePro {
 		return text;
 	}
 
-	// La recette global ‡ tout les spectacles
+	// La recette global √© tout les spectacles
 	public float getRecetteTotal() {
 		float recetteTotal = 0.0f;
 		for (int i = 0; i < spectacleTab.length; i++) {

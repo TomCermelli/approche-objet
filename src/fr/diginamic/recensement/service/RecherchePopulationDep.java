@@ -10,7 +10,7 @@ public class RecherchePopulationDep extends MenuService {
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
 		// TODO Auto-generated method stub
-		System.out.println("\nVeuillez entrez le numéro d'un département");
+		System.out.println("\nVeuillez entrez le numÃ©ro d'un dÃ©partement");
 		String depart = scanner.nextLine();
 		boolean verif = false;
 
@@ -24,7 +24,7 @@ public class RecherchePopulationDep extends MenuService {
 		}
 	
 		if (verif == false) {
-			System.err.println("Ce département n'existe pas veuillez choisir un département valide");
+			System.err.println("Ce dÃ©partement n'existe pas veuillez choisir un dÃ©partement valide");
 		}
 		
 		System.out.println("La population dans le " + depart + " est de " + nbHabs + " habitants\n");

@@ -9,12 +9,12 @@ public class Debit extends Operation {
 
 	@Override
 	public String afficherType() {
-		return "Débit";
+		return "DÃ©bit";
 	}
 
 	@Override
 	public String getDate() {
-		return "Opération effectué le " + date;
+		return "OpÃ©ration effectuÃ© le " + date;
 	}
 
 	@Override

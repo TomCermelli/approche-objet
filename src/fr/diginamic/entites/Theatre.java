@@ -14,7 +14,7 @@ public class Theatre {
 		this.argentTotal = argentTotal;
 	}
 
-	// Inscription, met à jour nombre de client total et l'argentTotal
+	// Inscription, met Ã© jour nombre de client total et l'argentTotal
 	public void inscrire(int clients, float price) {
 		int placeRestante = nbMax - client;
 		if ((this.client + clients) <= nbMax) {
@@ -22,10 +22,10 @@ public class Theatre {
 			argentTotal += price;
 		} else if ((client + clients) > nbMax && placeRestante > 0) {
 			client += placeRestante;
-			System.out.println("Vous avez rentré trop de participant seulement " + placeRestante
+			System.out.println("Vous avez rentrÃ© trop de participant seulement " + placeRestante
 					+ " personnes ont pus s'inscrire sur les " + clients + " participants");
 		} else if (client == nbMax) {
-			System.err.println("Il n'y a plus de place dans le théatre");
+			System.err.println("Il n'y a plus de place dans le thÃ©atre");
 		}
 	}
 

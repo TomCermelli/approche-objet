@@ -19,8 +19,8 @@ public class ManipulationFichier {
 		List<String> lines = Files.readAllLines(pathOrigine, StandardCharsets.UTF_8);
 		List<String> selection = new ArrayList<String>();
 	
-		lines.remove(0); // on l'enlève car cela correspond au nom des colonnes
-		selection.add("Nom de Ville;Numéro departement; Nombre habitant");
+		lines.remove(0); // on l'enlÃ©ve car cela correspond au nom des colonnes
+		selection.add("Nom de Ville;NumÃ©ro departement; Nombre habitant");
 
 		
 		for(int i=0; i<lines.size(); i++) {

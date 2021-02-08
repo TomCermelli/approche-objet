@@ -10,20 +10,20 @@ public class CompteTaux extends Compte {
 
 	// -------------------GETTER----------------------
 	public String getTauxRemuneration() {
-		return "Le taux de rémunération est de : " + tauxRemuneration + "%";
+		return "Le taux de rÃ©munÃ©ration est de : " + tauxRemuneration + "%";
 	}
 
 	// ------------------SETTER-----------------------
 
 	public String setTauxRemuneration() {
-		return "Le nouveau taux de rémunération est de : " + tauxRemuneration + "%";
+		return "Le nouveau taux de rÃ©munÃ©ration est de : " + tauxRemuneration + "%";
 	}
 
 	// -----------------toString----------------------
 	public String toString() {
 
 		String compteToString = super.toString();
-		return compteToString + " avec un taux de rémunération de " + tauxRemuneration + "%";
+		return compteToString + " avec un taux de rÃ©munÃ©ration de " + tauxRemuneration + "%";
 	}
 
 }

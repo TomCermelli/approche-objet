@@ -6,7 +6,7 @@ import java.util.Date;
 public class TestDates {
 
 	public static void main(String[] args) {
-		//jour/mois/ann�e
+		//jour/mois/année
 		Date dateMaintenant = new Date();
 		SimpleDateFormat formatDate = new SimpleDateFormat("'le 'dd/MM/yyyy");
 		System.out.println(formatDate.format(dateMaintenant));

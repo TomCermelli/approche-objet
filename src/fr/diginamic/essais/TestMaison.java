@@ -26,7 +26,7 @@ public class TestMaison {
 		maison.superficieTotal();
 
 		System.out.println();
-		// Il faut écrire le nom de la classe pour que ca fonctionne
+		// Il faut Ã©crire le nom de la classe pour que ca fonctionne
 		maison.typePiece("Chambre");
 		maison.superficieGlobalType("Chambre");
 

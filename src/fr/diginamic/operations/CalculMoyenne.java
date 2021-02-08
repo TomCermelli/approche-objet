@@ -4,7 +4,7 @@ public class CalculMoyenne {
 	private double[] tabMoyenne = new double[2];
 	private int index = 0;
 
-	// Ajout dans un tableau + l'agrandir si néccéssaire
+	// Ajout dans un tableau + l'agrandir si nÃ©ccÃ©ssaire
 	public void ajout(double nb) {
 
 		if (index == tabMoyenne.length - 1) {

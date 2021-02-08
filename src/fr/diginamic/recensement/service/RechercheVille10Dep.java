@@ -14,7 +14,7 @@ public class RechercheVille10Dep extends MenuService {
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
 		hashMapTrie trie = new hashMapTrie();
-		System.out.println("\nVeuillez entrez le numéro d'un département afin de voir les 10 villes les plus peuplées de celui ci");
+		System.out.println("\nVeuillez entrez le numÃ©ro d'un dÃ©partement afin de voir les 10 villes les plus peuplÃ©es de celui ci");
 		String depart = scanner.nextLine();
 
 		HashMap<String, Integer> mapHabDep = new HashMap<String, Integer>();
@@ -28,16 +28,16 @@ public class RechercheVille10Dep extends MenuService {
 
 				nomVille = recensement.getVilles().get(i).getNomCommune();
 				Integer nbHabCommune = mapHabDep.get(nomVille);
-				// on utilise le nom de région en tant que clé pour notre
-				// hashMap, on la crée à la volé et on lui donne une valeur
+				// on utilise le nom de rÃ©gion en tant que clÃ© pour notre
+				// hashMap, on la crÃ©e Ã© la volÃ© et on lui donne une valeur
 				// si elle n'existe pas
 
-				// si le contenu de ma clé est null , c'est à dire qu'on a aucune information
-				// pour la clé donnée
+				// si le contenu de ma clÃ© est null , c'est Ã© dire qu'on a aucune information
+				// pour la clÃ© donnÃ©e
 				if (nbHabCommune == null) {
 					nbHabCommune = recensement.getVilles().get(i).getPopulationTotal();
-					// on initialise une donnée à la clé en question ( exemple première boucle pour
-					// la région Occitani on
+					// on initialise une donnÃ©e Ã© la clÃ© en question ( exemple premiÃ©re boucle pour
+					// la rÃ©gion Occitani on
 					// lui donne un nombre d'hab)
 				} else {
 					nbHabCommune += recensement.getVilles().get(i).getPopulationTotal();
@@ -46,15 +46,15 @@ public class RechercheVille10Dep extends MenuService {
 			}
 		}
 		
-		// Si on ne trouve aucun département
+		// Si on ne trouve aucun dÃ©partement
 		if (verif == false) {
-			System.err.println("Ce département n'existe pas veuillez choisir un département valide\n");
+			System.err.println("Ce dÃ©partement n'existe pas veuillez choisir un dÃ©partement valide\n");
 		}
 
 		HashMap<Integer, String> map = trie.sortValues(mapHabDep);
 		int compteur = 0;
 		int affichage = 10;
-		System.out.println("Les 10 villes les plus peuplées dans le " + depart + " sont : \n");
+		System.out.println("Les 10 villes les plus peuplÃ©es dans le " + depart + " sont : \n");
 
 		Set set = map.entrySet(); // on utilise le set pour correspondre au Map.Entry ensuite
 		Iterator iterator = set.iterator();
@@ -62,8 +62,8 @@ public class RechercheVille10Dep extends MenuService {
 		if (verif == true) {
 			while (iterator.hasNext()) {
 				Map.Entry entry = (Map.Entry) iterator.next();
-				// Map entry demande l'itérator pour prendre l'ensemble key/values du coup on a
-				// accès au getKey + getValue
+				// Map entry demande l'itÃ©rator pour prendre l'ensemble key/values du coup on a
+				// accÃ©s au getKey + getValue
 				if (compteur >= mapHabDep.size() - 10) {
 					System.out.println(affichage+ ". " +entry.getKey() + " habitants : " + entry.getValue());
 					affichage--;

@@ -4,7 +4,7 @@ public class ConversionNombre {
 	public String chaine;
 	public int conversion;
 
-	// La méthode main ou on effectue nos lancement de méthode
+	// La mÃ©thode main ou on effectue nos lancement de mÃ©thode
 	public static void main(String[] args) {
 
 		String strTest = "450";
