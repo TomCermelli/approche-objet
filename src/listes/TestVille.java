@@ -6,6 +6,14 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Affichage de la ville la plus peuplé avec son nombre d'habitant ensuite on
+ * supprime la ville la moin peuplé et pour finir on affichge le nom des villes
+ * avec moin de 100_000 habitants en majuscule
+ * 
+ * @author tomce
+ *
+ */
 public class TestVille {
 
 	public static void main(String[] args) {
@@ -59,7 +67,7 @@ public class TestVille {
 			index++;
 		}
 		ville.remove(villeSupprimer);
-
+		/*
 		// Rechercher la plus petite ville, version boucle for
 		int nbhabitant = ville.get(0).getNbHabitant();
 		Ville villeRemove = null;
@@ -75,7 +83,6 @@ public class TestVille {
 		 * ville.remove(villeRemove); System.out.println("La ville la moin peuplé est "
 		 * +nameVille+ " elle a donc été supprimé");
 		 */
-		
 		System.out.println("Ville restante\n");
 		// Afficher nos ville restantes
 		for (int i = 0; i < ville.size(); i++) {

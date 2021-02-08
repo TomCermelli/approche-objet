@@ -11,6 +11,12 @@ import listes.Ville;
 import tri.CompareVilleNbHabs;
 import tri.CompareVilleNom;
 
+/**
+ * Affichage de la taille de la map 
+ * ainsi que le contenu de la hashMap au complet clé / valeur
+ * @author tomce
+ *
+ */
 public class CreationMap {
 
 	public static void main(String[] args) {

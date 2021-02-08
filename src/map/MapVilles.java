@@ -5,6 +5,11 @@ import java.util.Iterator;
 
 import listes.Ville;
 
+/**
+ * Suppréssion de la Ville la plus petite
+ * @author tomce
+ *
+ */
 public class MapVilles {
 
 	public static void main(String[] args) {

@@ -5,6 +5,13 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * On affiche le nombre de lettre que contient une chaine de caractère
+ * On affiche par la suite toute les villes qui provient d'un ArrayList en majuscule
+ * Pour finir on supprime toute les villes ou le premier caractère est égale à N
+ * @author tomce
+ *
+ */
 public class TestListeString {
 
 	public static void main(String[] args) {

@@ -5,6 +5,11 @@ import java.util.Iterator;
 
 import listes.Ville;
 
+/**
+ * Ajout de 2 hashMap dans une 3eme hashMap regroupant les informations des 2 précedantes
+ * @author tomce
+ *
+ */
 public class FusionMap {
 
 	public static void main(String[] args) {

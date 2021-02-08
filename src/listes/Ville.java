@@ -1,5 +1,12 @@
 package listes;
 
+/**
+ * Cette classe prend dans le constructeur 2 arguments:
+ * - Un String représentant le nom de la nouvelle Ville 
+ * - Un int représentant le nombre d'habitant dans cette ville
+ * @author tomce
+ *
+ */
 public class Ville {
 	private String nom;
 	private int nbHabitant;

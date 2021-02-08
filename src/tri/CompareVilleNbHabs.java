@@ -4,6 +4,12 @@ import java.util.Comparator;
 
 import listes.Ville;
 
+/**
+ * Comparateur sur le nb d'habitants.  
+ * tri ascendant si nombre d'habitant de v1 est supérieur à nombre d'habitant v2
+ * @author tomce
+ *
+ */
 public class CompareVilleNbHabs implements Comparator<Ville> {
 
 	@Override

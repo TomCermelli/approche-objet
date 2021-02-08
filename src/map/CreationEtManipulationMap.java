@@ -3,6 +3,12 @@ package map;
 import java.util.HashMap;
 import java.util.Iterator;
 
+/**
+ * Test de création de map
+ * Cette classe permet de voir: les clés d'une hashMap, la valeur de la clé ainsi que la taille de la map
+ * @author tomce
+ *
+ */
 public class CreationEtManipulationMap {
 
 	public static void main(String[] args) {

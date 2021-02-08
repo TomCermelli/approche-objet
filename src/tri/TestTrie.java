@@ -7,6 +7,13 @@ import java.util.List;
 
 import listes.Ville;
 
+/**
+ * Test des fonctions de trie,
+ * On compare dans un premier temps avec le comparateur CompareVilleNbHabs pour trier par nombre d'habitant croissant
+ * Dans un second temps on regarde un trie par ordre alphabétique avec CompareVilleNom
+ * @author tomce
+ *
+ */
 public class TestTrie {
 
 	public static void main(String[] args) {
