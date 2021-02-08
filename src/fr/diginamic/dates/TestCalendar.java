@@ -27,7 +27,7 @@ public class TestCalendar {
 		
 		
 		//date du jour CH
-		SimpleDateFormat formatDate4 = new SimpleDateFormat("'le 'EEEE dd MMMM yyyy HH:mm:ss", Locale.CHINA);
+		SimpleDateFormat formatDate4 = new SimpleDateFormat("'le 'EEEE dd MMMM yyyy HH:mm:ss", Locale.CHINESE);
 		System.out.println(formatDate4.format(cal2.getTime()));
 		
 		
