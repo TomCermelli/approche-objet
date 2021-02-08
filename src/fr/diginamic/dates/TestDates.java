@@ -14,7 +14,7 @@ public class TestDates {
 		//année/mois/jour heure:minute:seconde
 		Date dateMai = new Date(116, 4, 19, 23, 59, 30);
 		SimpleDateFormat formatDate2 = new SimpleDateFormat("'le 'yyyy/MM/dd HH:mm:ss");
-		System.out.println(formatDate2.format(dateMai)); 
+		System.out.println(formatDate2.format(dateMai));
 	}
 
 }
