@@ -23,6 +23,6 @@ public class ReflectionUtils {
 			System.out.println("La valeur de l'attribut " + field.getName() + " est " +
 
 					field.get(obj).toString());
-		}
+		} 
 	}
 }

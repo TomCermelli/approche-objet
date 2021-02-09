@@ -9,7 +9,7 @@ public class TestReflectionUtils {
 		Ville ville = new Ville("Montpellier", 280_000);
 		try {
 			ReflectionUtils.afficherAttributs(null);
-		}
+		} 
 
 		catch (ReflectionException e) {
 			System.err.println(e.getMessage());
